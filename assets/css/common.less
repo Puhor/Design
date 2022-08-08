@@ -1,0 +1,163 @@
+.header{
+    margin:0;
+    border:0px;
+    border-radius: 0px;
+    background:#fff;
+
+    /*粘性定位 当在最顶端的时候 跟正常头部一样
+    当滚动条滚动之后，变成固定定位一样*/
+    position: sticky;
+    left:0;
+    top:0;
+    width:100%;
+    z-index:10;
+
+    .logo{
+        color:#fff;
+        text-transform: uppercase;
+    }
+
+    .nav{
+        li{
+            a{
+                text-transform: uppercase;
+                border-bottom:3px solid transparent;
+                margin-right:1rem;
+                transition:all ease-in-out .3s;
+                color:rgb(68, 68, 68);
+    
+                /* a:hover */
+                &:hover{
+                    color: #3367D6;
+                    border-bottom:3px solid #3367D6;
+                }
+
+                &:focus{
+                    color:#3367D6;
+                }
+            }
+        }
+        
+    }
+
+    // 当前屏幕 <= 770px  max-width:770px 
+    @media screen and (max-width:770px){
+        .nav{
+            li{
+                a{
+                    width:100%;
+                    margin:0;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// footer
+.footer{
+    width: 100%;
+    background-color:rgb(38, 50, 56);
+    padding-top: 5%;
+    color: #fff;
+    .bottom{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 3%;
+        width: 90%;
+        .address{
+            width: 20%;
+            h4{
+                font-size: 1.5em;
+                font-weight: lighter;
+                margin-bottom: 1em;
+            }
+            p{
+                line-height: 2em;
+                margin-bottom: 1em;
+            }
+            li{
+                line-height: 2em;
+                a{
+                    color: #fff;
+                    &:hover{
+                        color: #3367D6;
+                    }
+                }
+            }   
+        }
+        .form-control{
+            background: #20292e;
+        }
+        span{
+            .btn{
+                background: #3367D6;
+                color: #fff;
+            }
+        }
+    }
+    .bottom-text{
+        width: 100%;
+        background: #20292e;
+        padding: 2% 0;
+        text-align: center;
+        p{
+            font-weight: lighter;
+            font-size: 0.7em;
+        }
+    }
+    @media screen and (max-width:1000px){
+        .container{
+            .bottom{
+                width: 80%; 
+                flex-wrap: wrap;
+                padding: 0 10%;
+                .address{
+                    width: 100%;
+                    margin-bottom: 15%;
+                }
+            }
+        }
+    }
+}
+
+.page-header{
+    background: #3367D6 url(..//images/page-header.png) no-repeat 75% top;
+    width: 100%;
+    box-shadow: inset 1px 1px 5px #666;
+    color: #fff;
+    padding: 5% 0%;
+    margin: 0;
+    .container{
+        .text{
+            .title{
+                font-size: 3em;
+                font-weight: lighter;
+            }
+            a{
+                color: #fff;
+                font-weight: lighter;
+                font-size: 1.5em;
+            }
+            span{
+                font-size: 1.5em;
+                font-weight: lighter;
+            }
+        }
+
+    } 
+    @media screen and (max-width:1000px){
+        .container{
+            .text{
+                .title{
+                font-size: 2em;
+                }
+                a{
+                color: #fff;
+                font-weight: lighter;
+                font-size: 1.5em;
+                }
+            }
+        }
+    }
+}
